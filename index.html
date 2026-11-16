@@ -578,6 +578,18 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,min(3.4vw,5.8
 .receipt .ln2{padding:.55vh 0}
 .receipt{padding-bottom:2.2vh}
 .receipt .stamp{top:.7vh;bottom:auto;left:auto;right:1.2vw;margin-left:0}
+
+/* ===== крупные рамки ===== */
+.photo{padding:.8vw .8vw 3.2vw}
+.photo figcaption{font-size:1.02em;bottom:.6vw}
+.tape{width:6.4vw;height:2.1vw}
+.receipt{font-size:.92em;padding:1.8vh 1.4vw 1.8vh}
+.receipt .ln2{padding:.32vh 0}
+.receipt .tot{margin-top:.8vh;padding-top:.8vh}
+.tag{margin-bottom:1vh;padding-top:.9vh;padding-bottom:.9vh;font-size:.93em}
+.tag .t1{font-size:1.5em}
+.rowph{gap:1.4vw;margin-bottom:3.4vh;padding-left:0}
+.rowph .typed{font-size:.8em;margin-bottom:1.4vh}
 body.levi .page{overflow:visible;clip-path:none}
 body.levi .spread,body.levi .pages,body.levi .book{overflow:visible}
 body.levi .age{display:none}
@@ -753,8 +765,8 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
  <div class="page R">
   <div class="rh"><span>письмо читателю</span><span>III</span></div>
   <div class="letter panel r" id="whyp"><div class="eyebrow" id="whyn"></div><div class="ttl" id="whyt"></div><div class="body" id="whyb"></div></div>
-<figure class="photo r abs" data-src="photos/merch2.jpg" style="--rot:-3deg;--w:15vw;--op:50% 58%;right:3.4vw;bottom:12.6vh"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Мерч Гриффиндора в чемодане"><div class="ph-ph"><b>фото</b><span>Чемодан Гриффиндора</span><small>нажмите, чтобы добавить</small></div></div><figcaption>Чемодан Гриффиндора</figcaption></figure>
-  <div class="typed r" style="margin-top:2.4vh">Рекорд, который это объясняет: 8,3 млн экземпляров финальной книги за сутки.</div>
+<figure class="photo r abs" data-key="merch2" style="--rot:-3deg;--w:19.5vw;--op:50% 58%;right:3vw;bottom:5vh"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Мерч Гриффиндора в чемодане"><div class="ph-ph"><b>фото</b><span>Чемодан Гриффиндора</span><small class="hint"></small></div></div><figcaption>Чемодан Гриффиндора</figcaption></figure>
+  <div class="typed r" style="margin-top:2.4vh;max-width:50%">Рекорд, который это объясняет: 8,3 млн экземпляров финальной книги за сутки.</div>
   <div class="pn"></div>
  </div>
 </div><div class="spine"></div></section>
@@ -833,7 +845,7 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
    <div class="tot"><span>ИТОГО (оценка)</span><span>≈$34,7 млрд</span></div>
    <span class="stamp slam">Оплачено</span>
   </div>
-  <figure class="photo r abs" data-src="photos/merch.jpg" style="--rot:3deg;--w:17vw;right:1.8vw;bottom:3.8vh"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Магазин с мерчем"><div class="ph-ph"><b>фото</b><span>Магазин с мерчем</span><small>нажмите, чтобы добавить</small></div></div><figcaption>Магазин с мерчем</figcaption></figure>
+  <figure class="photo r abs" data-key="merch" style="--rot:3deg;--w:22.5vw;right:1.4vw;bottom:3.4vh"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Магазин с мерчем"><div class="ph-ph"><b>фото</b><span>Магазин с мерчем</span><small class="hint"></small></div></div><figcaption>Магазин с мерчем</figcaption></figure>
   <div class="pn"></div>
  </div>
  <div class="page R">
@@ -843,7 +855,7 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
    <div class="tag"><div class="t1">+36%</div>Эффект зоны в Орландо: посещаемость парка Islands of Adventure выросла с 4,6 до 5,9 млн в 2010 году.</div>
    <div class="tag"><div class="t1">$1 млрд</div>Hogwarts Legacy заработала более миллиарда долларов в первые месяцы.</div>
   </div>
-  <div class="rowph"><figure class="photo" data-src="photos/park.jpg" style="--rot:-2.5deg;--w:17vw;--op:50% 22%"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Косой переулок, Орландо"><div class="ph-ph"><b>фото</b><span>Косой переулок, Орландо</span><small>нажмите, чтобы добавить</small></div></div><figcaption>Косой переулок, Орландо</figcaption></figure>
+  <div class="rowph"><figure class="photo" data-key="park" style="--rot:-2.5deg;--w:21.5vw;--op:50% 22%"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Косой переулок, Орландо"><div class="ph-ph"><b>фото</b><span>Косой переулок, Орландо</span><small class="hint"></small></div></div><figcaption>Косой переулок, Орландо</figcaption></figure>
    <div class="typed r">Мерч превращается в опыт: фирменные магазины, студийный тур, концерты с оркестром.</div>
   </div>
   <div class="pn"></div>
@@ -862,8 +874,8 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
  <div class="page R">
   <div class="rh"><span>экспонат</span><span>V</span></div>
   <div class="label r" id="fl"><div class="inv" id="fi"></div><div class="ttl" id="ft" style="font-family:var(--display);font-weight:700;font-size:1.9em;color:var(--acc);margin:.6vh 0 1.2vh"></div><div class="body" id="fb"></div></div>
-  <div class="hand r" style="margin-top:3vh;max-width:64%;transform:rotate(-2deg)">Все восемь признаков — «галочки» в этой франшизе ✓</div>
-  <figure class="photo r abs" data-src="photos/film.jpg" style="--rot:2.5deg;--w:18vw;--op:50% 40%;right:4vw;bottom:5.2vh"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Гарри и Волдеморт, кадр из фильма"><div class="ph-ph"><b>фото</b><span>Кадр из «Даров смерти»</span><small>нажмите, чтобы добавить</small></div></div><figcaption>Кадр из «Даров смерти»</figcaption></figure>
+  <div class="hand r" style="margin-top:3vh;max-width:44%;transform:rotate(-2deg)">Все восемь признаков — «галочки» в этой франшизе ✓</div>
+  <figure class="photo r abs" data-key="film" style="--rot:2.5deg;--w:23.5vw;--op:50% 40%;right:2.6vw;bottom:3.2vh"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Гарри и Волдеморт, кадр из фильма"><div class="ph-ph"><b>фото</b><span>Кадр из «Даров смерти»</span><small class="hint"></small></div></div><figcaption>Кадр из «Даров смерти»</figcaption></figure>
   <div class="pn"></div>
  </div>
 </div><div class="spine"></div></section>
@@ -1000,16 +1012,24 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
   };
 
 
-  /* фото на скотче: берём photos/<имя>.jpg или даём выбрать файл */
+  /* фото на скотче: ищем файлы рядом с index.html.
+     Положите фото прямо рядом с index.html (или в папку photos/) — подойдут имена
+     film / merch / merch2 / park или исходные IMG_1431 / IMG_1429 / IMG_1430 / IMG_1428,
+     расширения jpg, jpeg, png, webp. Имена можно поменять здесь: */
+  var PHOTO_NAMES={film:['film','IMG_1431'],merch:['merch','IMG_1429'],merch2:['merch2','IMG_1430'],park:['park','IMG_1428']};
+  var PHOTO_DIRS=['','photos/','images/','img/'],PHOTO_EXT=['jpg','jpeg','png','webp','JPG','JPEG','PNG','WEBP'];
   [].forEach.call(document.querySelectorAll('.photo'),function(f){
-    var img=f.querySelector('img'),src=f.getAttribute('data-src'),inp=document.createElement('input');
-    img.onload=function(){f.classList.add('has')};img.onerror=function(){f.classList.remove('has')};
-    if(src)img.src=src;
+    var key=f.getAttribute('data-key'),img=f.querySelector('img'),hint=f.querySelector('.hint'),inp=document.createElement('input'),list=[],i=0;
+    var names=PHOTO_NAMES[key]||[key];
+    PHOTO_DIRS.forEach(function(d){names.forEach(function(n){PHOTO_EXT.forEach(function(e){list.push(d+n+'.'+e)})})});
+    if(hint)hint.textContent='положите '+names[0]+'.jpg рядом с index.html';
+    img.onload=function(){f.classList.add('has')};
+    img.onerror=function(){f.classList.remove('has');i++;if(i<list.length)img.src=list[i]};
+    img.src=list[0];
     inp.type='file';inp.accept='image/*';inp.style.display='none';f.appendChild(inp);
     f.querySelector('.ph-ph').onclick=function(e){e.stopPropagation();inp.click()};
-    inp.onchange=function(){if(inp.files[0])img.src=URL.createObjectURL(inp.files[0])};
+    inp.onchange=function(){if(inp.files[0]){img.onerror=null;img.src=URL.createObjectURL(inp.files[0])}};
   });
-
   /* свечи */
   var cd=document.getElementById('candles');
   for(var i=0;i<11;i++){var c=document.createElement('div');c.className='candle';c.style.left=(4+i*9.2+Math.random()*3)+'%';c.style.animationDelay=(-Math.random()*6)+'s';c.style.opacity=.55+Math.random()*.4;c.style.top=(1+Math.random()*2.5)+'vh';cd.appendChild(c)}
