@@ -552,6 +552,32 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,min(3.4vw,5.8
 .tag{margin-bottom:2.8vh}
 .gauge b{font-size:1.9em}
 .foil{-webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='260'><filter id='m'><feTurbulence stitchTiles='stitch' type='fractalNoise' baseFrequency='.045 .08' numOctaves='3' seed='4'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0 0 0 -2.15'/></filter><rect width='100%' height='100%' filter='url(%23m)'/></svg>");mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='260'><filter id='m'><feTurbulence stitchTiles='stitch' type='fractalNoise' baseFrequency='.045 .08' numOctaves='3' seed='4'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0 0 0 -2.15'/></filter><rect width='100%' height='100%' filter='url(%23m)'/></svg>")}
+
+/* ===== ФОТО НА СКОТЧЕ ===== */
+.photo{position:relative;margin:0;width:var(--w,18vw);background:#f7eed9;padding:.7vw .7vw 2.9vw;box-shadow:0 .9vh 1.6vh rgba(50,25,5,.38),0 1px 2px rgba(50,25,5,.45),inset 0 0 0 1px rgba(120,80,30,.18);transform:rotate(var(--rot,-3deg));z-index:3;box-sizing:border-box}
+.photo.abs{position:absolute}
+.photo .ph{position:relative;aspect-ratio:3/2;background:#c9a574;overflow:hidden}
+.photo .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--op,50% 50%);display:none;filter:sepia(.3) contrast(.96) saturate(.92)}
+.photo.has .ph img{display:block}
+.photo .ph::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 52%,rgba(70,35,8,.38) 100%),linear-gradient(135deg,rgba(255,225,170,.14),transparent 40%)}
+.photo .ph-ph{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4vh;text-align:center;padding:0 .8vw;color:#6a4824;cursor:pointer;background:repeating-linear-gradient(45deg,rgba(120,80,30,.09) 0 .5vw,transparent .5vw 1vw),linear-gradient(135deg,#dfc593,#c49d66)}
+.photo .ph-ph b{font-family:var(--sc);text-transform:lowercase;letter-spacing:.22em;font-size:.9em}
+.photo .ph-ph span{font-family:var(--epi);font-style:italic;font-size:.9em;line-height:1.15}
+.photo .ph-ph small{font-family:var(--sc);text-transform:lowercase;letter-spacing:.1em;font-size:.62em;opacity:.7}
+.photo.has .ph-ph{display:none}
+.photo figcaption{position:absolute;left:.6vw;right:.6vw;bottom:.5vw;font-family:var(--script);font-size:.92em;line-height:1.1;text-align:center;color:#3a2a14;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tape{position:absolute;width:5.2vw;height:1.8vw;background:repeating-linear-gradient(90deg,rgba(255,246,205,.78) 0 3px,rgba(244,230,178,.7) 3px 6px);box-shadow:0 1px 2px rgba(60,30,5,.28);clip-path:polygon(0 0,100% 0,97% 12%,100% 25%,97% 38%,100% 50%,97% 62%,100% 75%,97% 88%,100% 100%,0 100%,3% 88%,0 75%,3% 62%,0 50%,3% 38%,0 25%,3% 12%);z-index:4;pointer-events:none}
+.tape.t1{top:-.9vw;left:-1.9vw;transform:rotate(-38deg)}
+.tape.t2{top:-.9vw;right:-1.9vw;transform:rotate(38deg)}
+.photo:nth-of-type(odd) .tape.t2{display:none}
+.photo.abs:nth-of-type(odd) .tape.t2{display:block}
+.rowph{display:flex;align-items:flex-end;gap:2vw;margin-top:auto;margin-bottom:5.6vh;padding-left:.8vw}
+.rowph .typed{flex:1;margin:0 0 2vh}
+.page.R .rowph>.typed:last-of-type{margin-top:0;margin-bottom:2vh}
+.tag{margin-bottom:1.5vh;padding-top:1.1vh;padding-bottom:1.1vh}
+.receipt .ln2{padding:.55vh 0}
+.receipt{padding-bottom:2.2vh}
+.receipt .stamp{top:.7vh;bottom:auto;left:auto;right:1.2vw;margin-left:0}
 body.levi .page{overflow:visible;clip-path:none}
 body.levi .spread,body.levi .pages,body.levi .book{overflow:visible}
 body.levi .age{display:none}
@@ -727,6 +753,7 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
  <div class="page R">
   <div class="rh"><span>письмо читателю</span><span>III</span></div>
   <div class="letter panel r" id="whyp"><div class="eyebrow" id="whyn"></div><div class="ttl" id="whyt"></div><div class="body" id="whyb"></div></div>
+<figure class="photo r abs" data-src="photos/merch2.jpg" style="--rot:-3deg;--w:15vw;--op:50% 58%;right:3.4vw;bottom:12.6vh"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Мерч Гриффиндора в чемодане"><div class="ph-ph"><b>фото</b><span>Чемодан Гриффиндора</span><small>нажмите, чтобы добавить</small></div></div><figcaption>Чемодан Гриффиндора</figcaption></figure>
   <div class="typed r" style="margin-top:2.4vh">Рекорд, который это объясняет: 8,3 млн экземпляров финальной книги за сутки.</div>
   <div class="pn"></div>
  </div>
@@ -806,6 +833,7 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
    <div class="tot"><span>ИТОГО (оценка)</span><span>≈$34,7 млрд</span></div>
    <span class="stamp slam">Оплачено</span>
   </div>
+  <figure class="photo r abs" data-src="photos/merch.jpg" style="--rot:3deg;--w:17vw;right:1.8vw;bottom:3.8vh"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Магазин с мерчем"><div class="ph-ph"><b>фото</b><span>Магазин с мерчем</span><small>нажмите, чтобы добавить</small></div></div><figcaption>Магазин с мерчем</figcaption></figure>
   <div class="pn"></div>
  </div>
  <div class="page R">
@@ -815,7 +843,9 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
    <div class="tag"><div class="t1">+36%</div>Эффект зоны в Орландо: посещаемость парка Islands of Adventure выросла с 4,6 до 5,9 млн в 2010 году.</div>
    <div class="tag"><div class="t1">$1 млрд</div>Hogwarts Legacy заработала более миллиарда долларов в первые месяцы.</div>
   </div>
-  <div class="typed r">Мерч превращается в опыт: фирменные магазины, студийный тур, концерты с оркестром.</div>
+  <div class="rowph"><figure class="photo" data-src="photos/park.jpg" style="--rot:-2.5deg;--w:17vw;--op:50% 22%"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Косой переулок, Орландо"><div class="ph-ph"><b>фото</b><span>Косой переулок, Орландо</span><small>нажмите, чтобы добавить</small></div></div><figcaption>Косой переулок, Орландо</figcaption></figure>
+   <div class="typed r">Мерч превращается в опыт: фирменные магазины, студийный тур, концерты с оркестром.</div>
+  </div>
   <div class="pn"></div>
  </div>
 </div><div class="spine"></div></section>
@@ -832,7 +862,8 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
  <div class="page R">
   <div class="rh"><span>экспонат</span><span>V</span></div>
   <div class="label r" id="fl"><div class="inv" id="fi"></div><div class="ttl" id="ft" style="font-family:var(--display);font-weight:700;font-size:1.9em;color:var(--acc);margin:.6vh 0 1.2vh"></div><div class="body" id="fb"></div></div>
-  <div class="hand r" style="margin-top:3vh;transform:rotate(-2deg)">Все восемь признаков — «галочки» в этой франшизе ✓</div>
+  <div class="hand r" style="margin-top:3vh;max-width:64%;transform:rotate(-2deg)">Все восемь признаков — «галочки» в этой франшизе ✓</div>
+  <figure class="photo r abs" data-src="photos/film.jpg" style="--rot:2.5deg;--w:18vw;--op:50% 40%;right:4vw;bottom:5.2vh"><i class="tape t1"></i><i class="tape t2"></i><div class="ph"><img alt="Гарри и Волдеморт, кадр из фильма"><div class="ph-ph"><b>фото</b><span>Кадр из «Даров смерти»</span><small>нажмите, чтобы добавить</small></div></div><figcaption>Кадр из «Даров смерти»</figcaption></figure>
   <div class="pn"></div>
  </div>
 </div><div class="spine"></div></section>
@@ -904,6 +935,7 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
    <li>Business Insider: эффект зоны в Орландо. WB Games, Gematsu, VGC: Hogwarts Legacy.</li>
    <li>TheWrap, TVLine, Newsweek: сериал HBO (премьера в 2027 году).</li>
    <li>Morning Consult (2023). Список самых доходных медиафраншиз (Wikipedia).</li>
+   <li>Фото: кадр из фильма «Дары смерти. Часть 2»; мерч; парк Universal Orlando (andreev.ru).</li>
   </ul></div>
   <div class="pn"></div>
  </div>
@@ -940,7 +972,7 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
   spreads.forEach(function(sp){[].forEach.call(sp.querySelectorAll('.page'),function(pg){var a=document.createElement('div');a.className='age';pg.insertBefore(a,pg.firstChild)})});
 
   /* Левиоса */
-  var levi=false,SEL='h2,p,li,.sticky,.typed,.letter,.pull,.stamp,.seal,.tag,.ev,.eb,.mn,.mcore,.receipt,.report,.label,.big,.cap,.hand,.bars .b,.gauge,.fld,.ribbon,.rh,.mx th,.mx td,.ledger .li,.gen .gr,.card li,.mnote,.pn,.eyebrow,.chap,.ornm';
+  var levi=false,SEL='h2,p,li,.sticky,.typed,.letter,.pull,.stamp,.seal,.tag,.ev,.eb,.mn,.mcore,.receipt,.report,.label,.big,.cap,.hand,.bars .b,.gauge,.fld,.ribbon,.rh,.mx th,.mx td,.ledger .li,.gen .gr,.card li,.mnote,.pn,.eyebrow,.chap,.ornm,.photo';
   function rnd(a,b){return a+Math.random()*(b-a)}
   function lift(el){
     if(el._lv)return;el._lv=true;
@@ -966,6 +998,17 @@ body.levi .lumos#levb{background:#e6cf9a;color:#1a110a}
     if(levi){[].forEach.call(spreads[cur].querySelectorAll(SEL),lift)}
     else{spreads.forEach(function(sp){[].forEach.call(sp.querySelectorAll(SEL),function(e){if(e._lv)reset(e,true)})})}
   };
+
+
+  /* фото на скотче: берём photos/<имя>.jpg или даём выбрать файл */
+  [].forEach.call(document.querySelectorAll('.photo'),function(f){
+    var img=f.querySelector('img'),src=f.getAttribute('data-src'),inp=document.createElement('input');
+    img.onload=function(){f.classList.add('has')};img.onerror=function(){f.classList.remove('has')};
+    if(src)img.src=src;
+    inp.type='file';inp.accept='image/*';inp.style.display='none';f.appendChild(inp);
+    f.querySelector('.ph-ph').onclick=function(e){e.stopPropagation();inp.click()};
+    inp.onchange=function(){if(inp.files[0])img.src=URL.createObjectURL(inp.files[0])};
+  });
 
   /* свечи */
   var cd=document.getElementById('candles');
